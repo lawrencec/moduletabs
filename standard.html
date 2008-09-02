@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Tab Module - Standard Implementation</title>
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.2.2/build/grids/grids-min.css"> 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.2.0/build/logger/assets/logger.css"> 
+	<link rel="stylesheet" type="text/css" href="css/mtab.css">
+	<link rel="stylesheet" type="text/css" href="css/moduleTabs.css">
+	<script type="text/javascript" src="http://yui.yahooapis.com/2.2.2/build/utilities/utilities.js"></script> 		
+	<script type="text/javascript" src="http://yui.yahooapis.com/2.2.0/build/logger/logger-min.js"></script> 
+	<script type="text/javascript" src="js/moduleTabs.js"></script>
+	<script src="js/Tabs.js" type="text/javascript"></script>
+	
+<script src="js/Tab-i18n.js" type="text/javascript"></script>	
+	
+<script type="text/javascript">
+function exampleHandler(e,args) {
+	YAHOO.log(e);
+}	
+//default is 'active' - change this for other languages
+YAHOO.NT.Tab.TITLE_TEXT = "active";
+
+function init() {
+	//Standard
+	var mTabConfig = {
+		bDoHilite	: true,
+		oHiliteArgs : {
+			from:"00be00",
+			to:"9eff9e",
+			duration:1,
+			bTransparent:true,
+			fEase:(YAHOO.util.Easing) ? YAHOO.util.Easing.easeOut : null
+		}
+	};
+	mTab =  new YAHOO.NT.TabsModule('mTab',mTabConfig);
+	mTab.addListener('TabAdded',exampleHandler);					
+	mTab.addListener('TabRemoved',exampleHandler);
+	mTab.addListener('TabActivated',exampleHandler);
+	mTab.addListener('TabDeactivated',exampleHandler);
+	
+	var myLogReader = new YAHOO.widget.LogReader(); 
+}
+YAHOO.util.Event.onDOMReady(init);
+		
+	</script>
+		<?php require ('includes/css/demostyles.php'); ?>
+</head>
+
+<body id="yahoo-com">
+<div id="doc" class="yui-t6">
+	<div id="bd">
+		<div id="yui-main">
+			<div class="yui-b">
+			
+			<div id="menu"  class="content mTab" >
+					<ul class="tab">
+						<li class="on"><a href="standard.html" class="tab">Standard Tab</a>
+					</li>
+						<li><a href="draggable.html" class="tab">Draggable Tab</a>
+					</li>
+					<li><a href="closeable.html" class="tab">Closeable Tab</a>
+					</li>
+								</ul>
+				</div>
+			<h1>Standard Tabs Module</h1>
+			<p>The Standard Tab widget provides standard features for a tab widget. <?php include('includes/blog_link.php');?></p>
+			
+			<h2>Features</h2>
+			
+						<ul>
+							<li>Uses <a href="http://developer.yahoo.com/ypatterns/pattern.php?pattern=moduletabs">event</a> <a href="http://icant.co.uk/sandbox/eventdelegation/">delegation</a></li>
+							<li>Url Fragment aware - if a url ends with a named fragment, then any matching tab with a link or id that matches will be automatically activated on page load. This <a href="standard.php#tabc" target="_blank">link</a> will load this page in a new window with the &quot;Tab C&quot; tab already selected.</li>
+							<li>Text Size Independent</li>
+							<li>Implements the <a href="http://developer.yahoo.com/ypatterns/pattern.php?pattern=moduletabs">Module Tabs pattern</a> and <a href="http://developer.yahoo.com/ypatterns/pattern.php?pattern=spotlight">Spotlight design patterns.</a></li>
+						</ul>
+			<h2>An Example :</h2>
+		<div id="mTab"  class="mTab" >
+		<ul class="tab">
+			<li class="on"><a href="tabA.html" class="tab">Tab A</a>
+			<div class="pane paneShow">
+						<p>Donec ut ante nec sem pretium dictum. Fusce at elit ac orci laoreet sodales. Suspendisse scelerisque massa id est. Proin arcu lectus, suscipit a, volutpat id, scelerisque convallis, turpis. Etiam dignissim. Curabitur cursus varius quam. In porttitor lacus non enim. Integer eget massa. Praesent mauris turpis, tempor in, dapibus malesuada, egestas rutrum, tellus. Nam id tortor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+
+<p>Aliquam eget eros a metus rhoncus eleifend. Nullam volutpat. Aenean dictum condimentum massa. Donec tortor. Vestibulum consequat nisi quis orci. Sed convallis. Phasellus ut neque ac erat nonummy elementum. Nulla eget dolor vel est pellentesque vulputate. Quisque ornare ipsum vitae lacus. Aliquam aliquet, leo ac sagittis consectetuer, ipsum odio aliquet quam, non interdum ligula enim ut urna. Donec purus. Pellentesque nonummy tempor justo. Ut ultrices. Sed lorem enim, ultricies vitae, consectetuer volutpat, eleifend nec, risus. Pellentesque turpis. Nullam nec elit quis nunc rhoncus imperdiet. Curabitur mi velit, mollis vel, imperdiet ac, porttitor dapibus, felis. Suspendisse ipsum mauris, tincidunt vel, fermentum in, porta ut, dolor. Vivamus placerat ultricies ante. </p>
+			</div></li>
+			<li><a href="tabB.html" class="tab">Tab B</a>
+			<div class="pane paneHide">
+						<p>Praesent feugiat turpis tincidunt diam. Aliquam elementum ante in felis. Pellentesque et ligula quis elit adipiscing lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas viverra, arcu et lobortis adipiscing, mauris urna pretium sapien, id consectetuer lacus turpis ac nibh. Proin scelerisque. Nullam lobortis. Duis faucibus risus nec elit. Ut auctor blandit pede. Suspendisse pretium. Suspendisse potenti. Sed vehicula. Integer pulvinar viverra ante. Nullam a tortor. Maecenas lacinia. Suspendisse pretium. Suspendisse potenti. Sed vehicula. Integer pulvinar viverra ante. Nullam a tortor. Maecenas lacinia.</p>					
+			</div></li>
+			<li><a href="#tabC" class="tab">Tab C</a>
+			<div class="pane paneHide">
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis porttitor sapien ac diam. Vivamus convallis. Praesent et diam sed lectus dignissim sagittis. Integer dictum purus a est condimentum bibendum. Etiam dignissim. Cras rutrum orci et orci. Praesent feugiat est vel ante. Sed nisi justo, nonummy id, ornare quis, facilisis ac, risus. Nam at quam. Integer eu sapien sed leo pretium aliquam. Praesent vel elit. Ut eu ipsum. Nullam congue vehicula neque. Aenean iaculis erat nec neque. Cras blandit mi ultricies dui. Proin leo dolor, rutrum blandit, viverra id, rutrum vitae, odio. Phasellus id tortor.</p>			</div></li>
+		</ul>
+	</div>
+			<h2>Markup</h2>
+			<p>The html markup for standard tabs looks like this:</p>
+			<textarea id="htmlMarkup" class="codepress html readonly-on">
+&lt;div id="mTab"  class="mTab" &gt;
+ &lt;ul class="tab"&gt;
+  &lt;li class="on"&gt;&lt;a href="tabA.html" class="tab"&gt;Tab A&lt;/a&gt;
+   &lt;div class="pane paneShow"&gt;
+    &lt;p&gt;Lorem ipsum&lt;/p&gt;
+   &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="tabB.html" class="tab"&gt;Tab B&lt;/a&gt;
+   &lt;div class="pane paneHide"&gt;
+    &lt;p&gt;Lorem ipsum&lt;/p&gt;					
+   &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#tabC" class="tab"&gt;Tab C&lt;/a&gt;
+   &lt;div class="pane paneHide"&gt;
+    &lt;p&gt;Lorem ipsum&lt;/p&gt;			
+   &lt;/div&gt;
+  &lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/div&gt;</textarea>
+			<h2>Configuration</h2>
+			<p>The initiating javascript looks like this:</p>
+			<textarea id="jsMarkup" class="codepress javascript readonly-on">
+//Config object literal
+var mTabConfig = {
+  bDoHilite	: true,
+  oHiliteArgs : {
+   from:"00be00",
+   to:"9eff9e",
+   duration:1,
+   bTransparent:true,
+   fEase:(YAHOO.util.Easing) ? YAHOO.util.Easing.easeOut : null
+  }
+};
+//instantiate object
+mTab =  new YAHOO.NT.TabsModule('mTab',mTabConfig);
+//add listeners (optional)
+mTab.addListener('TabAdded',exampleHandler);					
+mTab.addListener('TabRemoved',exampleHandler);
+mTab.addListener('TabActivated',exampleHandler);
+mTab.addListener('TabDeactivated',exampleHandler);</textarea>
+
+
+			</div>
+	
+		</div>
+		</div>
+	<div id="ft">
+		    
+	</div>
+</div>
+</body>
+</html>

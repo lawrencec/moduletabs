@@ -1,0 +1,35 @@
+body  { font-family:Arial, sans-serif;}
+p { margin:1em 0;}
+h1 { font-size:115%;}
+h2 { font-size:100%;}
+h3 { font-size:92%;}
+code { white-space:pre;}
+textarea { width:100%;height:15em;}
+#menu {height:auto;}
+#menu li.on {height:1.575em;}
+#menu.mTab {height:auto;_height:1.5em;min-height:2em;margin:0;border-bottom:1px solid #ccc;border-top:0;min-height:1.575em;}
+#menu.mTab ul.tab{ top:0;}
+#mTab ul.tab li,#mTab ul.tab li div.pane {
+	background-color:#beffbe;
+}
+#mTab ul.tab li li { background-color:transparent;}
+#mTab ul.tab li div.pane,#mTab ul.tab li.on,#mTab {
+	border-color:#009e00;
+}
+#mTab ul.tab li.on,#mTab ul.tab li.on div.pane {
+	background-color:#9eff9e;
+}
+
+#mTab-draggable ul.tab li,#mTab-draggable ul.tab li div.pane,,#mTab-draggable2 ul.tab li,#mTab-draggable2 ul.tab li div.pane#mTab-closeable ul.tab li,#mTab-closeable ul.tab li div.pane {
+	background-color:#bebeff;
+}
+#mTab-draggable ul. li li,#mTab-draggable2 ul.tab li li,#mTab-closeable ul.tab li li { background-color:transparent;}
+#mTab-draggable ul.tab li div.pane,#mTab-draggable ul.tab li.on,#mTab-draggable,#mTab-draggable2 ul.tab li div.pane,#mTab-draggable2 ul.tab li.on,#mTab-draggable2,#mTab-closeable ul.tab li div.pane,#mTab-closeable ul.tab li.on,#mTab-closeable {
+	border-color:#0000be;
+}
+#mTab-draggable ul.tab li.on,#mTab-draggable ul.tab li.on div.pane,#mTab-draggable2 ul.tab li.on,#mTab-draggable2 ul.tab li.on div.pane,#mTab-closeable ul.tab li.on,#mTab-closeable ul.tab li.on div.pane { 
+	background-color:#9e9eff;
+}
+#mTab-draggable ul.tab li.drgPosIndic,#mTab-draggable2 ul.tab li.drgPosIndic,#mTab-closeable ul.tab li.drgPosIndic  { background-color:transparent;}
+/*Closeable specific*/
+#mTab-closeable ul.tab LI.on a.tab { padding-right:1.5em;}

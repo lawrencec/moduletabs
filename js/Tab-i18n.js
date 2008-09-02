@@ -1,0 +1,1 @@
+YAHOO.NT.Tab.ACTIVE_TITLE_TEXT	=	"active";

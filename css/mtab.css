@@ -1,0 +1,51 @@
+/*Tab Container */
+.mTab {margin-top:2em; border-top:1px solid #ccc;margin-bottom:1.5em;min-height:3em;height:7em;}
+	
+/*Tab list*/
+.mTab ul.tab{float:left; margin:0; padding:0; list-style:none; position:relative; top:-1.65em; left:-1px; width:100%;}
+.mTab ul {padding:0;}
+.mTab ul.tab li{float:left; font:normal 100% Arial; display:block;height:1.5em;background: #EFEFF0;margin:0;margin-right:3px;  }
+
+/*All Tabs*/
+.mTab ul.tab a.tab{display:block; text-decoration:none; color:#003399;padding:0.3em 0.4em; text-align:center;font-size:85%;min-width:5em;position:relative;font-weight:bold;}
+.mTab ul.tab a.tab:visited{color:#003399; }
+.mTab ul.tab a.tab:hover{text-decoration:underline; }
+.mTab ul.tab div.pane ul,.mTab ul.tab div.pane li,.mTab ul.tab div.pane h3,.mTab ul.tab div.pane p,.mTab ul.accrd li p{margin:5px;}
+
+
+/*Active Tab*/
+.mTab ul.tab LI.on{background:#fff;border:1px solid #ccc;border-bottom:0;height:1.65em;}
+.mTab ul.tab LI.on a.tab{color:#000;  padding-bottom:4px;background-image:none;}
+.mTab ul.tab LI.on a.tab:visited{color:#000; }
+.mTab ul.tab LI.on a.tab:hover{text-decoration:none; }
+
+/*Tab Pane*/
+.mTab div.pane { position:absolute; left:-9999px;top:1.65em;margin:0 0 0 0px;width:100%;_width:32.8em; border:1px solid #ccc;border-top: 0;background-color:#fff;line-height:100%; } /*line-height is mandatory*/
+.mTab div.paneShow { z-index:1000;left:0px;height:7em;overflow:auto;}
+.mTab div.paneHide { left:-9999px;}
+.mTab ul.js div.paneShow { overflow:visible;height:auto;}
+
+/*Invite Drop Pattern - For Draggable Tabs only*/
+.mTab ul.tab li.drpInvte { padding-top:2px;border:1px solid black;border-bottom:0;}
+.mTab ul.tab li.drgPosIndic { background:url(../images/green_arrow.gif) no-repeat; margin:0; padding:0;width:9px;position:absolute;top:-1em; }
+
+/*Close Icon - For Closeable Tabs only*/
+.mTabCloseIcon { background-repeat:no-repeat;cursor:pointer;height:12px;margin:0px;padding:0px;position:absolute;top:25%;right:0.3em;width:12px;z-index:6;background-image:url(../images/close12_1.gif);}
+
+
+/*Accordion Tabs */
+.mTab ul.accrd { border-top:1px solid black;}
+.mTab ul.accrd li{font:normal 100% Arial; height:auto;display:block;background: #EFEFF0;margin:0;background-color:#fff;  border:1px solid black;border-top:0;}
+.mTab ul.accrd li { background:url(../images/grbggrdt2.gif) repeat-x;border-top:2px solid white;}
+.mTab ul.accrd li.on div.pane { border-bottom:1px;}
+.mTab ul.accrd a.tab {text-decoration:none;margin:0.5em;}
+.mTab ul.accrd div.pane{ position:relative;top:0;left:-1px;display:none;margin:0;width:100%; border:1px solid black;border-width:1px 1px 0;border-top-color:#999; }
+.mTab ul.accrd div.paneShow { display:block;}
+/* Content */
+.mTab div.pane ul li{ list-style-type: disc;display:list-item;list-style-position:inside; }
+.mTab ul.tab div.pane li{ float:none;padding-bottom:0;background:none;margin-bottom:5px;height:auto;}
+/*.mTab ul.accrd div.pane * { margin:0 0.5em;}*/
+.mTab ul.accrd div.pane ul,.mTab ul.accrd div.pane ul li { margin:0 0.5em;}
+.mTab ul.accrd div.pane p { margin:0.5em;}
+.mTab ul.accrd li li{ border:0;background-color:transparent;background-image:none;}
+.mTab ul.accrd li p { margin:0;}
